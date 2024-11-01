@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar JS</title>
+</head>
+
+<body>
+
+    <p id="sapasaya"></p>
+    <p id="output"></p>
+
+    <script>
+        /*tipe data(string,integer,double,float)
+        value data (value yang pass oleh user)
+        
+        operator
+        == hanya membandingkan value
+        === membandingkan value dan tipe data
+        ! tidak sama
+        != tidak sama dengan
+        && dan/and
+        // atau /or
+        >lebih dari
+        <kurang dari
+        >=lebih dari sama dengan
+        <=kurang dari sama dengan
+        */
+
+        //var untuk membuat variabel secara global
+        var myname = prompt("sebutkan nama anda");
+
+        if (myname != null) {
+            document.getElementById('sapasaya').innerHTML = "<h3>hallo," + myname + "/<h3>";
+        } else {
+            alert("kenalan dulu yuk!");
+        }
+
+        /*document.write("5 x 5 =", 5 + 5  , "<br/>") ;
+        document.write("5 / 5 =", 5 + 5  , "<br/>") ;
+        document.write("5 + 5 =",  5 + 5  , "<br/>") ;
+        document.write("5 - 5 =",  5 + 5  , "<br/>") ;
+
+        var uang = 12000.50 ;
+        document.write("uang saya: ", (uang / 3).toFixed(2), "</br>");
+
+        var bilangan = 5;
+        document.write("++bilangan = ", ++bilangan, "<br/>") ;
+        document.write("--bilangan = ", --bilangan, "<br/>") ;
+
+        var bilangan1 = 10;
+        var bilangan2 = 20;
+        document.write("bilangan 1 + bilangan 2 = ", bilangan1 =bilangan2, "<br/>") ;
+
+        document.write("tebak hasil 5 + 4 x 2 = ", 5 + 4 * 2)
+        document.write("tebak hasil (5 + 4) x 2 = ", (5 + 4) * 2, "<br/>") ;
+
+        var bilanganRound = 5.45;
+        document.write("Math ceil() = ", Math.ceil(bilanganRound), "<br/>");
+        document.write("Math floor() = ", Math.floor(bilanganRound), "<br/>");
+        document.write("Math round() = ", Math.round(bilanganRound), "<br/>");
+
+        var stringpanjang = "ini adalah" + "string yang" + "sangat panjang sekali" ;
+        document.write("jumlah string: ", stringpanjang.length, "<br/>") ;
+        document.write("'sangat' index ke: ", stringpanjang.indexOf("sangat"), "<br/>") ;
+        document.write(stringpanjang.slice(4, 10), "<br/>");
+        document.write(stringpanjang.slice(4), "<br/>");
+        document.write(stringpanjang.substr(23, 4), "<br/>");
+        document.write(stringpanjang.replace("panjang sekali", "pendek banget"), "<br/>)") ;
+        console.log(stringpanjang.split());
+        console.log(stringpanjang.split(" "));
+
+        var arrString = stringpanjang.split(" ")
+        console.log(arrString[3]); //normal
+        console.log(arrString[3].toUpperCase()); //uppercase
+        console.log(arrString[3].toLowerCase()); //lowercase
+
+        var strStyle = "faiz fm";
+        document.write("<br/><br/>");
+        document.write("Text Bold: ", strStyle.bold(), "<br/>");
+        document.write("Text italics: ", strStyle.italics(), "<br/>");
+        document.write("Text strike: ", strStyle.strike(),"<br/>");
+        document.write("Text besar: ", strStyle.fontsize("12"),"<br/>");
+        document.write("Text sub: ", strStyle.sub(), "<br/>");
+        document.write("Text sup: " , strStyle.sup(), "<br/>");
+
+        document.write("<br/><br/>");
+        var umur = 6;
+        if((umur >=5) && (umur <6)){
+            document.write("pergi ke TK" + "<br/>");
+        } else if (umur >15) {
+            document.write("pergi ke sekolah", "<br/>");
+        } else {
+            document.write("masih remaja", "<br/>");
+        }*/
+
+
+
+        //booLean = True False
+
+
+
+        document.write("!true : ", !true, "<br/>"); //true 1
+        document.write("!false :", !false, "<br/>"); //false 0
+
+        var bilanganBoolean = 5;
+        document.write("\"5\" == 5 ", ("5" == 5), "<br/>"); //true membandingkan value
+        document.write("\"5\" === 5 ", ("5" === 5), "<br/>"); //false membandingkan value & tipe data
+
+        // (kondisi) ? iftrue ; iffalse
+        var cekUmur = (bilanganBoolean >= 10) ? "lebih dari 10 tahun" : "kurang dari 10 tahun";
+        document.write("cek Umur = ", cekUmur, "<br/>");
+
+        var i = 1;
+        while (i <= 10) {
+            document.getElementById('output').innerHTML += i + "<br/>";
+            console.log(i);
+            i++;
+        }
+
+        var nilai = [4, 6, 8, 12, 34, 29, 22, 1, 6,]; //array
+        nilai.sort(function (x, y) { return x - y }); // function sort ada x&y
+
+        document.write("nilai array: ", nilai.toString(), "<br/>");
+
+
+
+        document.write("<br/>==========================<br/><br/>");
+
+
+        function dikalikan(param1) {
+            var variabel1 = 2;
+
+            return param1 * variabel1;
+        }
+
+        function kalifungsi(func1, param2) {
+            return func1(param2);
+        }
+
+        document.write("5 * 2 =", kalifungsi(dikalikan,5), "<br/>");
+        //odfjojhgorjmhgormjhomrhomothopyh
+
+        document.write("<br/>==========================<br/><br/>");
+
+        function kaliArray(paramArray1){
+            var returnArray = [];
+
+            for(i = 0; i < paramArray1.length; i++){
+                returnArray.push(paramArray1[i] * 2);
+            }
+
+
+            return returnArray;
+        }
+
+        document.write("Kalikan array jadi 2 [5,6,7,8,9] = ", kaliArray([5,6,7,8,9]). toString(), "<br/>");
+
+        
+    </script>
+
+</body>
+
+</html>"

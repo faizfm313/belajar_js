@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>latihan 3</title>
+</head>
+<body>
+    <button type="button" onclick="tampilkanDataAssociative()">Tampilkan</button>
+    <div id="containerSinglePerson"></div>
+
+    <script>
+        var dataMahasiswa = ['faiz fm', 23, 'Jakarta']; //single array
+        var dataMahasiswaKelas = [
+        ['faiz fm', 23, 'Jakarta'],
+        ['faizzz', 22, 'Jakarta'],
+        ['faizz', 21, 'Jakarta'],
+        ['faizz313', 20, 'Jakarta'],
+        ];// assosiative array
+        function tampilkanData(){ 
+            var ulElm = document.createElement("ul");
+
+            var liElm1 = document.createElement("li");
+            liElm1.innerHTML = "Nama: " + dataMahasiswa[0];
+
+            var liElm2 = document.createElement("li");
+            liElm2.innerHTML = "Umur: " + dataMahasiswa[1];
+
+            var liElm3 = document.createElement("li");
+            liElm3.innerHTML = "Kota: " + dataMahasiswa[2];
+
+            ulElm.appendChild(liElm1);
+            ulElm.appendChild(liElm2);
+            ulElm.appendChild(liElm3);
+
+            var containerElm = document.getElementById('containerSinglePerson');
+
+            containerElm.appendChild(ulElm);
+        }
+
+        function tampilkanDataAssociative(){
+            var appenedElm = dataMahasiswaKelas.map(row => `<ul>
+                <li>Nama: ${row[0]}</li>
+                <li>Umur: ${row[1]}</li>
+                <li>Kota: ${row[2]}</li>
+            </ul>`).join('')
+
+            var containerElm = document.getElementById('containerSinglePerson');
+
+            console.log(containerElm);
+
+            containerElm.innerHTML = appenedElm;
+
+            
+
+        }
+    </script>
+</body>
+</html>

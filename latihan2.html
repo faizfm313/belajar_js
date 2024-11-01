@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>latihan 2</title>
+</head>
+<body>
+    <a href="javascript:void(0)"
+    onClick="alert('HEllo World')"
+    onmouseover="this.style.color='red'"
+    onmouseout="this.style.color='black'"
+    onmousedown="this.text='jangan di klik'"
+    onmouseup="this.text='terimakashit!'"
+    >
+        Click saya
+    </a>
+
+    <br/>
+    <br/>
+    <h3 id="hasil"></h3>
+
+    <input type="text" id="txtjumlah" placeholder="masukan nilai "/>
+    <input type="text" id="txtjumlah" placeholder="masukan nilai kali"/>
+    <button type="button"onClick>kalikan 2</button>
+
+
+    <script>
+        function openAlert(param1){
+            alert(param1)
+        }
+
+        function kali2(){
+            var komponenText = document.getElementById('txtJumlah');
+            var isiKomponen = komponenText.value;
+            var hasilKali = isiKomponen * 2;
+
+            document.getElementById('hasil').innerHTML = "Hasilnya adalah: " + hasilKali;
+        }
+
+        function kali(){
+            var komponenJumlah = document.getElementById('txtJumlah');
+            var komponenKali = document.getAnimations('txtKali');
+
+            var isikomponenJumlah = komponenJumlah.value;
+            var isikomponenKali = komponenKali.value;
+
+            var hasilKali = isiKomponenJumlah * isiKomponenKali;
+        
+
+            document.getElementById('hasil').innerHTML = "Hasilnya adalah: " + hasilKali;
+        }
+    </script>
+    
+</body>
+</html>
